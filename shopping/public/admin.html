@@ -33,7 +33,7 @@
             
             <h2>Current Products</h2>
 
-            <ul class="list-group" ng-repeat="product in products | orderBy: ['-purchases','title']">
+            <ul class="list-group" ng-repeat="product in products | orderBy: ['title', '-purchases']">
 
                 <span class="glyphicon glyphicon-remove" ng-click="delete(product)"></span> {{product.title}} - price {{product.price}} - ordered: {{product.purchases}} <img src="{{product.URL}}" alt="{{product.title}}">
             </ul>
